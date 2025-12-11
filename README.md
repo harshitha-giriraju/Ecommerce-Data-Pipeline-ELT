@@ -3,18 +3,7 @@
 A complete end-to-end data pipeline for e-commerce analytics using Python, SQLite, and Apache Airflow. This project demonstrates modern data engineering practices including ELT operations, data validation, and automated reporting with visualizations.
 
 
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Data Visualizations](#data-visualizations)
-- [SQL Transformations](#sql-transformations)
-
-## 🎯 Overview
+## Overview
 
 This project implements a production-ready data pipeline for analyzing e-commerce data from Olist, a Brazilian marketplace platform. The pipeline handles the complete data lifecycle from extraction through transformation and reporting, with both manual and automated execution modes.
 
@@ -26,7 +15,7 @@ This project implements a production-ready data pipeline for analyzing e-commerc
 - **Validate**: Automated data quality and pipeline integrity checks
 - **Report**: Generate analytics reports with visualizations
 
-## ✨ Features
+## Features
 
 -  Automated ELT pipeline orchestration with Apache Airflow
 -  Comprehensive data visualizations and analytics
@@ -36,18 +25,17 @@ This project implements a production-ready data pipeline for analyzing e-commerc
 -  Custom Airflow operators for reusable components
 -  Detailed logging and error handling
 
-## 🏗️ Architecture
-
+## Architecture
 ```
-┌─────────────┐     ┌──────────┐     ┌──────────────┐     ┌──────────┐
-│   Extract   │────▶│   Load   │────▶│  Transform   │────▶│ Validate │
-│  (CSV/API)  │     │ (SQLite) │     │ (SQL Queries)│     │ & Report │
-└─────────────┘     └──────────┘     └──────────────┘     └──────────┘
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌──────────────────┐
+│    Extract  │────▶│    Load     │────▶│ Transform   │────▶│Validate & Report │
+│  (CSV/API)  │     │  (SQLite)   │     │(SQL Queries)│     │                  │
+└─────────────┘     └─────────────┘     └─────────────┘     └──────────────────┘
 ```
 
 The pipeline follows the ELT (Extract, Load, Transform) pattern, optimizing for performance by loading raw data first and transforming within the database.
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 E-Commerce-Data-Pipeline-ELT/
@@ -75,7 +63,7 @@ E-Commerce-Data-Pipeline-ELT/
 └── README.md
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -99,7 +87,7 @@ E-Commerce-Data-Pipeline-ELT/
 3. **Verify dataset files**
    Ensure all CSV files are present in the `dataset/` folder.
 
-## 💻 Usage
+## Usage
 
 ### Option 1: Manual Execution
 
@@ -157,7 +145,7 @@ Access Airflow UI at **http://localhost:8080**
 3. Toggle it to "On" (if paused)
 4. Click the "Trigger DAG" button (▶️ icon)
 
-## 📊 Data Visualizations
+## Data Visualizations
 
 The pipeline generates insightful visualizations including:
 
@@ -175,7 +163,7 @@ Sample outputs are saved in the `images/` directory:
 - `top_10_revenue_categories.png`
 - And more...
 
-## 🔍 SQL Transformations
+## SQL Transformations
 
 The `queries/` folder contains business intelligence SQL queries:
 
