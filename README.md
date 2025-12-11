@@ -25,6 +25,32 @@ This project implements a production-ready data pipeline for analyzing e-commerc
 -  Custom Airflow operators for reusable components
 -  Detailed logging and error handling
 
+## Dataset Setup
+
+The dataset files are not included in this repository due to size constraints (126MB+).
+
+### Download Instructions
+
+1. **Visit:** [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) by André Sionek on Kaggle
+2. **Download all CSV files** (Kaggle account sign-in required)
+3. **Create a `dataset/` folder** in the project root directory
+4. **Place all CSV files** in the `dataset/` folder
+
+### Required Files
+
+Ensure you have these 9 files in your `dataset/` folder:
+- `olist_customers_dataset.csv`
+- `olist_geolocation_dataset.csv`
+- `olist_order_items_dataset.csv`
+- `olist_order_payments_dataset.csv`
+- `olist_order_reviews_dataset.csv`
+- `olist_orders_dataset.csv`
+- `olist_products_dataset.csv`
+- `olist_sellers_dataset.csv`
+- `product_category_name_translation.csv`
+
+**Note:** The pipeline will not run without these files. Ensure all CSV files are downloaded and placed in the correct directory before proceeding with installation.
+
 ## Architecture
 ```
 ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌──────────────────┐
